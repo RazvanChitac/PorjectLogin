@@ -9,7 +9,6 @@ public class Users {
     private static final String USERS_SEQUENCE = "users_id_seq";
     private static final String USERS_GENERATOR = "student_generator";
 
-
     @Id
     @SequenceGenerator(name = USERS_GENERATOR, sequenceName = USERS_SEQUENCE)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = USERS_GENERATOR)
