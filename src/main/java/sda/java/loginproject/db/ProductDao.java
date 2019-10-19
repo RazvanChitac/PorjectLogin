@@ -1,4 +1,4 @@
-package db;
+package sda.java.loginproject.db;
 
 import sda.java.loginproject.entity.Product;
 
