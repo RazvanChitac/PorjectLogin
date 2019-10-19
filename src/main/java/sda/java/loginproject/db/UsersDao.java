@@ -1,6 +1,8 @@
 package sda.java.loginproject.db;
 import sda.java.loginproject.entity.Users;
 
+import static java.sql.Types.NULL;
+
 public class UsersDao extends Dbinitializer {
 
     public void insertUser (Users user) {
@@ -17,11 +19,9 @@ public class UsersDao extends Dbinitializer {
         closeSessionAndTransaction();
         return user;
     }
-
-    public void updateUser (int id) {
+    public void updateUser (Users user) {
         openSessionAndTransaction();
-        Users user = new Users();
-        if (id == user.getId()) {
+        if (user.getId() != 0) {
             session.update(user);
         }
         closeSessionAndTransaction();
