@@ -1,7 +1,17 @@
 package sda.java.loginproject.entity;
-
 import javax.persistence.*;
 import java.util.Objects;
+
+@NamedQueries({
+        @NamedQuery(
+                name = "find_user_by_username",
+                query = "SELECT u FROM users u WHERE u.username = :userName"
+        ),
+        @NamedQuery(
+                name = "update_student",
+                query = "UPDATE users u SET u.username =:userName, s.password =:password WHERE u.id = :id"
+        )
+})
 
 @Entity
 @Table(name = "Users")
