@@ -14,7 +14,7 @@ public class Stock {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = STOCK_GENERATOR )
     private int id;
 
-    @Column(name = "nrPieces")
+    @Column(name = "nr_pieces")
     private String nrPieces;
 
     public Stock() {
