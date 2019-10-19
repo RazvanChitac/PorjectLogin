@@ -1,4 +1,4 @@
-package db;
+package sda.java.loginproject.db;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
