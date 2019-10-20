@@ -10,9 +10,8 @@
         <property name="hibernate.connection.password">parola</property>
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="entity.Student"/>
-        <mapping class="entity.Address"/>
-        <mapping class="entity.Grades"/>
-        <mapping class="entity.Courses"/>
+        <mapping class="sda.java.loginproject.entity.Users"/>
+        <mapping class="sda.java.loginproject.entity.Products"/>
+
     </session-factory>
 </hibernate-configuration>

@@ -5,19 +5,19 @@ import java.util.Objects;
 @NamedQueries({
         @NamedQuery(
                 name = "find_user_by_username",
-                query = "SELECT u FROM users u WHERE u.username = :userName"
+                query = "SELECT u FROM Users u WHERE u.username = :userName"
         ),
         @NamedQuery(
-                name = "update_student",
-                query = "UPDATE users u SET u.username =:userName, s.password =:password WHERE u.id = :id"
+                name = "update_user",
+                query = "UPDATE Users u SET u.username =:userName, u.password =:password WHERE u.id = :id"
         )
 })
 
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 public class Users {
     private static final String USERS_SEQUENCE = "users_id_seq";
-    private static final String USERS_GENERATOR = "student_generator";
+    private static final String USERS_GENERATOR = "users_generator";
 
     @Id
     @SequenceGenerator(name = USERS_GENERATOR, sequenceName = USERS_SEQUENCE)

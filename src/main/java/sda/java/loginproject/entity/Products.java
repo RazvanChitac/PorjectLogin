@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Product")
-public class Product {
+@Table(name = "Products")
+public class Products {
     private static final String PRODUCT_SEQUENCE = "product_id_seq";
     private static final String PRODUCT_GENERATOR = "product_generator";
 
@@ -16,14 +16,13 @@ public class Product {
 
     private int id;
 
-    @Column(name = "denumire")
-    private String denumire;
+    @Column(name = "product_name")
+    private String productName;
 
+    @Column(name = "price")
+    private int price;
 
-    @Column(name = "pret")
-    private int pret;
-
-    public Product() {
+    public Products() {
     }
 
     public int getId() {
@@ -35,42 +34,42 @@ public class Product {
     }
 
     public String getDenumire() {
-        return denumire;
+        return productName;
     }
 
     public void setDenumire(String denumire) {
-        this.denumire = denumire;
+        this.productName = denumire;
     }
 
     public int getPret() {
-        return pret;
+        return price;
     }
 
     public void setPret(int pret) {
-        this.pret = pret;
+        this.price = pret;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return id == product.id &&
-                pret == product.pret &&
-                Objects.equals(denumire, product.denumire);
+        Products products = (Products) o;
+        return id == products.id &&
+                price == products.price &&
+                Objects.equals(productName, products.productName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, denumire, pret);
+        return Objects.hash(id, productName, price);
     }
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Products{" +
                 "id=" + id +
-                ", denumire='" + denumire + '\'' +
-                ", pret=" + pret +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

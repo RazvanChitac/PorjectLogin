@@ -1,8 +1,6 @@
 package sda.java.loginproject.db;
 import sda.java.loginproject.entity.Users;
 
-import static java.sql.Types.NULL;
-
 public class UsersDao extends Dbinitializer {
 
     public void insertUser (Users user) {
