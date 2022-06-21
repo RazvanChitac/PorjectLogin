@@ -17,7 +17,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<hibernate.version>5.4.3.Final</hibernate.version>
-		<mySql.version>8.0.17</mySql.version>
+		<mySql.version>8.0.28</mySql.version>
 	</properties>
 
 	<dependencies>
